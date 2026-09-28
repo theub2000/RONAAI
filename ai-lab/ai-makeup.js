@@ -368,7 +368,7 @@ class Engine {
   load(onProgress) { if (onProgress) this.progress = onProgress; return (this._p ??= this._load()); }
   async _load() {
     quietMediaPipeLogs();
-    const mp = await import(this.url('vendor/mediapipe/vision_bundle.mjs'));
+    const mp = await import(this.url('vendor/mediapipe/vision_bundle.js'));
     this.mp = mp;
     const wasmDir = this.url('vendor/mediapipe/wasm').replace(/\/$/, '');
     const fs = await mp.FilesetResolver.forVisionTasks(wasmDir);
