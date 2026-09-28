@@ -1,0 +1,63 @@
+/* Base: reset + typography primitives */
+*, *::before, *::after { box-sizing: border-box; }
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  background: var(--c-white);
+}
+html.is-locked, html.is-locked body { overflow: hidden; }
+body {
+  margin: 0;
+  background: var(--c-white);
+  color: var(--c-ink);
+  font-family: var(--f-sans);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+}
+img, svg, picture, canvas { display: block; max-width: 100%; }
+img { height: auto; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+p, h1, h2, h3, dl, dd, figure, ol, ul, blockquote { margin: 0; padding: 0; }
+ol, ul { list-style: none; }
+::selection { background: var(--accent); color: #fff; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.sr-only {
+  position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.skip-link {
+  position: fixed; left: 12px; top: -60px; z-index: 100; padding: 10px 16px;
+  background: var(--c-black); color: #fff; font-size: var(--fs-small);
+  transition: top 0.3s var(--ease-out);
+}
+.skip-link:focus { top: 12px; }
+
+.wrap { width: 100%; max-width: calc(var(--wrap) + var(--gutter) * 2); margin: 0 auto; padding: 0 var(--gutter); }
+
+/* "→ Styles by Löna" kicker line */
+.kicker {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--f-en); font-size: var(--fs-kicker); font-weight: 600; letter-spacing: 0;
+  color: var(--accent-ink); line-height: 1.4;
+}
+.kicker svg { width: 12px; height: 12px; flex: none; }
+.kicker--light { color: var(--accent); }
+
+/* Section titles: bold uppercase geometric sans */
+.sec-title {
+  font-family: var(--f-en); font-weight: 800; font-size: var(--fs-h2);
+  line-height: 1.04; letter-spacing: -0.02em; text-transform: uppercase; color: var(--c-ink);
+}
+.sec-title--light { color: #fff; }
+.sec-desc { font-size: var(--fs-desc); line-height: 1.7; color: var(--c-text); letter-spacing: -0.02em; }
+
+/* QA lock: deterministic screenshots */
+.qa-lock *, .qa-lock *::before, .qa-lock *::after { transition: none !important; animation-play-state: paused !important; }

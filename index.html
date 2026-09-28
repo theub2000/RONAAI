@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Löna 로나 청담본점 · AI Beauty Lab</title>
+<meta name="description" content="로나 청담본점. 청담 헤어 & 메이크업. 서울 강남구 도산대로75길 19, 02-545-1707">
+<meta name="theme-color" content="#ffffff">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<script>
+/* Decide before first paint whether the opening plays (once per session). */
+(function () {
+  var d = document.documentElement, q = location.search, seen = false;
+  try { seen = sessionStorage.getItem('lona:opened') === '1'; } catch (e) {}
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  d.classList.add('js');
+  d.classList.add(!seen && !reduce && !/[?&](shot|lock)=1/.test(q) ? 'is-opening' : 'no-opening');
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+})();
+</script>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap">
+<link rel="preload" as="image" href="flight/poster.webp" media="(min-aspect-ratio: 1/1)" fetchpriority="high">
+<link rel="preload" as="image" href="flight/poster-mobile.webp" media="(max-aspect-ratio: 1/1)" fetchpriority="high">
+<link rel="stylesheet" href="vendor/lenis.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="ai-lab/ai-makeup.css">
+<link rel="stylesheet" href="css/ailab.css">
+</head>
+<body>
+
+<!-- Brand + UI symbols. Wordmark traced from the salon's own logo file (fill = currentColor). -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="lona-word" viewBox="0 0 988 380"><path d="M359.25 373.58C350.43 372.96 349.28 372.84 342.88 371.78C331.95 369.98 319.93 365.90 311.50 361.13C295.68 352.18 284.51 341.09 275.50 325.38C272.68 320.46 269.49 313.09 267.77 307.50C267.32 306.06 266.75 304.26 266.50 303.50C266.05 302.16 264.82 297.05 263.78 292.25C263.49 290.94 262.89 287.23 262.44 284.00L261.62 278.12L261.63 263.25C261.63 249.15 261.66 248.17 262.20 244.38C262.51 242.18 262.92 239.25 263.11 237.88C263.30 236.50 263.63 234.70 263.85 233.88C264.07 233.07 264.25 232.17 264.25 231.88C264.25 231.60 264.65 229.80 265.13 227.88C269.40 210.96 275.80 197.98 285.60 186.38C290.13 181.01 296.95 174.78 302.62 170.83C313.38 163.34 326.07 158.06 339.88 155.34C349.37 153.47 357.19 152.75 367.96 152.75C374.87 152.75 381.51 153.09 385.00 153.62C386.31 153.82 388.11 154.05 389.00 154.14C393.42 154.55 402.87 156.73 409.00 158.75C424.82 163.96 437.93 172.52 448.98 184.88C457.39 194.27 463.89 205.63 468.09 218.28C470.41 225.24 472.62 235.19 473.25 241.50C473.39 242.94 473.71 245.36 473.94 246.88C474.31 249.23 474.38 251.59 474.38 263.25C474.38 275.03 474.32 277.23 473.94 279.50C473.70 280.94 473.39 283.31 473.25 284.75C472.99 287.53 472.02 293.28 471.35 296.00C471.14 296.89 470.69 298.75 470.37 300.12C467.71 311.48 461.54 324.89 454.49 334.62C451.68 338.50 449.26 341.27 444.77 345.76C437.59 352.93 430.06 358.34 420.88 362.94C414.89 365.93 405.03 369.37 398.88 370.61C397.91 370.80 396.28 371.13 395.25 371.35C393.20 371.77 388.04 372.64 386.25 372.87C380.83 373.55 364.78 373.97 359.25 373.58ZM822.25 373.58C804.97 372.28 792.31 366.32 782.96 355.08C779.97 351.49 777.88 348.09 775.46 342.88C773.37 338.38 772.15 334.37 770.26 325.88C769.33 321.70 768.63 311.26 768.84 304.75C769.01 299.32 769.62 292.65 770.11 290.88C770.29 290.19 770.59 288.84 770.76 287.88C771.89 281.57 775.46 272.85 779.25 267.12C783.37 260.90 788.91 255.42 795.37 251.19C802.21 246.71 811.43 242.97 822.38 240.25C825.04 239.59 829.18 238.91 837.62 237.75C843.03 237.01 852.26 236.74 871.83 236.75C889.84 236.75 890.51 236.72 891.06 235.90C891.16 235.75 891.24 231.57 891.25 226.62C891.25 217.40 890.90 211.53 890.16 208.57C889.96 207.77 889.73 206.68 889.64 206.12C889.33 204.18 887.70 198.94 886.65 196.54C882.20 186.27 874.66 179.85 863.50 176.81C857.16 175.08 855.41 174.87 847.00 174.88C840.02 174.88 839.16 174.92 836.83 175.44C835.43 175.75 834.06 176.00 833.80 176.00C832.79 176.00 827.27 177.85 824.82 179.00C818.72 181.88 814.32 185.97 810.53 192.30C808.53 195.65 805.58 202.73 804.88 205.88C804.41 208.00 803.61 210.17 803.10 210.68L802.52 211.25L793.41 211.25C784.82 211.25 784.27 211.22 783.72 210.77L783.12 210.29L783.12 188.70C783.12 168.84 783.16 167.05 783.55 166.46C784.02 165.73 786.05 164.89 792.75 162.62C802.05 159.46 812.91 156.78 821.50 155.50C823.36 155.23 825.76 154.83 826.83 154.63C827.91 154.42 829.26 154.25 829.84 154.25C830.41 154.25 832.68 154.03 834.88 153.76C845.92 152.42 866.06 152.42 877.88 153.75C894.35 155.60 904.97 158.40 915.88 163.75C932.07 171.70 942.19 183.22 948.70 201.12C951.30 208.27 953.30 218.66 954.05 228.88C954.27 231.96 954.39 248.17 954.49 288.21L954.62 343.29L955.22 343.77C955.78 344.23 956.37 344.25 968.12 344.25C979.88 344.25 980.47 344.27 981.03 344.73L981.62 345.21L981.70 355.82C981.74 362.34 981.67 366.68 981.52 367.07C981.35 367.52 980.98 367.80 980.32 367.98C979.03 368.34 894.01 368.35 892.71 367.99C892.01 367.80 891.73 367.55 891.52 366.96C891.34 366.44 891.25 362.49 891.25 355.23C891.25 345.74 891.20 344.23 890.87 343.90C890.66 343.69 890.33 343.58 890.15 343.65C889.96 343.72 888.82 344.98 887.60 346.45C886.38 347.92 884.09 350.42 882.51 352.01C873.07 361.47 863.11 367.54 851.82 370.72C845.46 372.50 842.52 373.04 836.51 373.49C833.42 373.73 824.93 373.78 822.25 373.58ZM8.43 368.01C6.25 367.72 6.38 368.41 6.38 356.25L6.38 345.51L6.94 344.94L7.51 344.38L23.69 344.25C32.59 344.18 40.07 344.03 40.31 343.91C40.56 343.79 40.84 343.40 40.94 343.03C41.04 342.67 41.12 272.26 41.12 186.57C41.12 37.36 41.11 30.75 40.68 30.32C40.26 29.90 39.15 29.87 23.87 29.75L7.51 29.62L6.94 29.06L6.38 28.49L6.38 17.75L6.38 7.01L6.94 6.44L7.51 5.88L74.99 5.81C117.63 5.77 142.69 5.83 143.09 5.99C143.52 6.15 143.80 6.53 143.98 7.18C144.33 8.43 144.34 27.04 143.99 28.29C143.80 28.99 143.55 29.27 142.96 29.48C142.43 29.66 137.17 29.75 126.50 29.75C111.46 29.75 110.81 29.77 110.40 30.22C110.00 30.67 109.97 39.85 109.99 185.40C110.01 328.00 110.04 340.13 110.42 340.55C110.81 340.98 113.04 341.00 162.00 341.00L213.16 341.00L213.71 340.42L214.25 339.84L214.25 317.70C214.25 296.27 214.27 295.54 214.73 294.97L215.21 294.38L226.34 294.38C236.70 294.38 237.51 294.41 237.93 294.82C238.35 295.25 238.38 297.07 238.45 330.57C238.50 354.79 238.44 366.16 238.26 366.79C238.11 367.29 237.80 367.79 237.56 367.91C237.06 368.16 10.24 368.26 8.43 368.01ZM502.75 368.03C501.52 367.68 501.49 367.42 501.56 355.92L501.62 345.21L502.22 344.73C502.78 344.27 503.37 344.25 514.91 344.25L527.02 344.25L527.64 343.64L528.25 343.02L528.25 263.31C528.25 194.88 528.20 183.53 527.90 183.11C527.55 182.64 527.05 182.62 515.03 182.50C503.45 182.38 502.48 182.34 502.07 181.93C501.66 181.52 501.62 180.67 501.55 171.05C501.47 160.33 501.56 159.01 502.44 158.59C502.95 158.35 586.64 158.14 588.91 158.37C591.60 158.65 591.36 157.38 591.50 171.97C591.59 181.10 591.71 184.81 591.91 185.01C592.45 185.55 593.20 184.99 594.52 183.05C605.37 167.24 617.21 158.61 633.12 154.93C643.72 152.48 657.37 152.01 667.62 153.76C684.60 156.65 696.99 164.73 705.73 178.58C708.73 183.33 711.40 189.25 713.26 195.28C714.47 199.17 715.68 204.13 716.04 206.62C716.17 207.59 716.45 209.11 716.64 210.00C717.05 211.83 717.31 213.91 717.93 220.25C718.31 224.19 718.37 230.52 718.49 283.96L718.62 343.29L719.22 343.77C719.78 344.23 720.36 344.25 731.76 344.25C738.51 344.25 743.98 344.35 744.33 344.48C744.68 344.62 745.06 345.05 745.22 345.52C745.60 346.62 745.61 365.86 745.23 366.96C745.02 367.55 744.74 367.80 744.04 367.99C742.78 368.34 635.23 368.35 633.97 367.99C633.34 367.82 632.97 367.53 632.77 367.05C632.57 366.56 632.50 363.31 632.55 355.78L632.62 345.21L633.22 344.73C633.77 344.28 634.33 344.25 643.91 344.25L654.02 344.25L654.65 343.62L655.28 343.00L655.17 281.19C655.10 238.29 654.99 218.65 654.79 217.00C654.39 213.49 653.49 207.80 653.12 206.38C651.23 199.08 649.48 195.41 646.38 192.22C643.37 189.15 640.58 187.59 635.86 186.34C633.27 185.66 632.84 185.62 628.00 185.62C622.48 185.62 620.78 185.89 616.25 187.44C609.65 189.69 603.96 194.63 600.19 201.38C597.53 206.14 595.99 210.56 594.03 219.12C593.02 223.53 592.04 232.67 591.76 240.38C591.39 250.58 591.40 341.90 591.78 342.97C591.93 343.40 592.26 343.87 592.51 344.01C592.79 344.15 596.96 344.25 603.08 344.25C612.67 344.25 613.23 344.27 613.78 344.73L614.38 345.21L614.38 356.22C614.38 366.46 614.34 367.26 613.93 367.68C613.50 368.10 610.92 368.13 558.43 368.16C528.15 368.19 503.09 368.12 502.75 368.03ZM372.38 351.24C376.56 350.77 380.79 349.25 384.52 346.87C386.67 345.49 390.14 342.09 391.80 339.74C395.30 334.76 397.99 327.76 399.87 318.75C400.62 315.13 402.00 305.34 402.25 301.88C402.38 299.95 402.66 296.80 402.87 294.88C404.03 283.98 404.04 241.45 402.88 231.50C402.68 229.78 402.45 227.19 402.37 225.75C402.29 224.31 401.89 220.59 401.48 217.50C399.51 202.47 396.36 192.68 391.36 186.04C389.69 183.81 386.10 180.55 383.80 179.16C378.45 175.94 369.38 174.23 363.68 175.36C362.69 175.55 361.37 175.79 360.75 175.87C358.89 176.14 355.77 177.24 353.23 178.53C347.14 181.63 342.20 187.59 339.06 195.62C336.81 201.39 334.77 210.59 333.86 219.12C333.65 221.05 333.38 223.02 333.24 223.50C333.11 223.98 332.89 226.29 332.75 228.62C332.62 230.96 332.39 234.51 332.25 236.50C331.47 247.51 331.29 270.34 331.88 282.25C332.44 293.50 332.98 301.75 333.25 303.00C333.38 303.62 333.66 305.67 333.87 307.56C334.31 311.57 335.59 319.31 335.98 320.34C336.13 320.73 336.43 321.88 336.64 322.90C337.89 328.94 340.78 335.66 343.99 339.95C350.51 348.67 360.37 352.59 372.38 351.24ZM864.39 340.64C878.20 338.79 888.62 326.89 890.89 310.38C891.16 308.40 891.24 302.94 891.24 284.56C891.25 261.58 891.24 261.24 890.75 260.75C890.26 260.26 889.92 260.25 877.94 260.26C862.27 260.27 859.99 260.46 854.25 262.30C842.68 265.99 834.63 275.97 832.40 289.38C830.92 298.28 830.89 303.37 832.27 314.50C832.74 318.34 834.55 324.63 836.03 327.58C837.94 331.38 841.81 335.68 845.00 337.55C847.35 338.93 850.84 340.20 853.38 340.59C856.39 341.06 861.05 341.08 864.39 340.64ZM325.12 107.35C322.26 106.91 319.84 106.18 317.76 105.12C310.29 101.34 304.43 93.54 302.56 84.91C301.97 82.15 301.98 75.01 302.58 72.08C303.34 68.45 304.65 65.36 306.87 62.00C310.91 55.91 316.05 52.10 322.45 50.46C326.57 49.41 329.95 49.41 334.01 50.45C338.46 51.59 341.50 53.31 345.05 56.70C350.69 62.09 353.82 69.26 354.18 77.63C354.30 80.23 354.22 81.13 353.64 84.13C352.52 89.94 350.63 94.02 347.13 98.23C342.66 103.59 337.23 106.62 330.52 107.48C328.03 107.80 328.01 107.80 325.12 107.35ZM405.48 107.49C398.24 106.69 392.18 103.09 387.40 96.75C385.20 93.83 383.29 90.01 382.33 86.62C381.65 84.20 381.63 83.95 381.64 78.38C381.65 72.85 381.68 72.54 382.33 70.38C383.28 67.23 385.39 63.00 387.21 60.59C392.54 53.53 399.69 49.75 407.71 49.75C414.45 49.75 420.18 52.24 425.40 57.42C428.81 60.82 431.48 65.34 432.90 70.12C433.50 72.13 433.58 72.90 433.69 77.26C433.86 84.20 433.27 87.19 430.75 92.30C428.24 97.38 423.66 102.16 418.75 104.84C415.01 106.87 409.63 107.95 405.48 107.49Z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M3 12h17m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-arrow-l" viewBox="0 0 24 24"><path d="M21 12H4m6-6-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24"><path d="M8 16 16 8m-7 0h7v7" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 20V5m-6 6 6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2" fill="currentColor"/><path d="M3.5 10h17" stroke="#0b0b0c" stroke-width="1.6"/><path d="M8 3v4M16 3v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-cal-o" viewBox="0 0 24 24"><rect x="4" y="5.5" width="16" height="14.5" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 10h16M8.5 3.5v4M15.5 3.5v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M12 4.5c-4.7 0-8.5 3-8.5 6.7 0 2.3 1.5 4.4 3.8 5.6l-.8 3.2 3.6-2.2c.6.1 1.2.1 1.9.1 4.7 0 8.5-3 8.5-6.7S16.7 4.5 12 4.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 3.8 9 3.3l1.6 4.2-2 1.4a11 11 0 0 0 6.5 6.5l1.4-2 4.2 1.6-.5 2.4c-.2.9-1 1.6-2 1.6C11 19 5 13 5 5.8c0-1 .7-1.8 1.6-2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.3" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></symbol>
+  <symbol id="i-kakao" viewBox="0 0 24 24"><path d="M12 4C7 4 3 7.2 3 11.1c0 2.5 1.7 4.7 4.2 6l-.9 3.3c-.1.3.2.5.5.4l3.9-2.6c.4 0 .9.1 1.3.1 5 0 9-3.2 9-7.1S17 4 12 4Z" fill="currentColor"/></symbol>
+  <symbol id="i-naver" viewBox="0 0 24 24"><path d="M4.5 4.5h5.1l4.8 7V4.5h5.1v15h-5.1l-4.8-7v7H4.5z" fill="currentColor"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">본문 바로가기</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" data-theme="hero">
+  <div class="sns-bar">
+    <a href="https://www.instagram.com/lona_chungdam/" target="_blank" rel="noopener">Instagram<svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+    <a href="http://pf.kakao.com/_jYWxbs" target="_blank" rel="noopener">Kakao<svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+    <a href="https://m.booking.naver.com/booking/13/bizes/515276" target="_blank" rel="noopener">Naver Booking<svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+  </div>
+  <div class="gnb">
+    <a class="gnb__logo" href="#top" aria-label="Löna 청담본점 처음으로">
+      <svg viewBox="0 0 988 380" aria-hidden="true"><use href="#lona-word"/></svg>
+    </a>
+    <nav class="gnb__nav" aria-label="주요 메뉴">
+      <a href="#brand">Brand</a>
+      <a class="gnb__ai" href="#ai-beauty">AI Beauty</a>
+      <a href="#p-designer">Artist</a>
+      <a href="#style">Style</a>
+      <a href="#p-wedding">Wedding</a>
+      <a href="#p-scalp">Event</a>
+    </nav>
+    <a class="btn-booking" href="https://m.booking.naver.com/booking/13/bizes/515276" target="_blank" rel="noopener">Booking<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="menu" id="menu" hidden>
+  <nav class="menu__nav" aria-label="모바일 메뉴">
+    <a href="#brand"><b>Brand</b><span>브랜드</span></a>
+    <a href="#ai-beauty"><b>AI Beauty</b><span>AI 뷰티 랩</span></a>
+    <a href="#p-designer"><b>Artist</b><span>디자이너</span></a>
+    <a href="#style"><b>Style</b><span>스타일</span></a>
+    <a href="#p-wedding"><b>Wedding</b><span>웨딩</span></a>
+    <a href="#p-scalp"><b>Event</b><span>이벤트</span></a>
+  </nav>
+  <a class="btn-booking btn-booking--lg" href="https://m.booking.naver.com/booking/13/bizes/515276" target="_blank" rel="noopener">Booking<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  <div class="menu__foot">
+    <p>서울 강남구 도산대로75길 19, 1층</p>
+    <p><a href="tel:02-545-1707">02-545-1707</a> · 화–일 10:00–18:00 · 월 휴무</p>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- ============ 1. VISUAL — scroll fly-through ============ -->
+  <section class="hero" id="top" aria-label="로나 청담본점 살롱 투어">
+    <div class="hero__stage">
+      <div class="hero__media">
+        <picture class="hero__poster">
+          <source media="(max-aspect-ratio: 1/1)" srcset="flight/poster-mobile.webp">
+          <img src="flight/poster.webp" width="1440" height="810" alt="로나 청담본점 외관과 유리 온실" fetchpriority="high">
+        </picture>
+        <canvas class="hero__canvas" aria-hidden="true"></canvas>
+        <div class="hero__scrim" aria-hidden="true"></div>
+        <div class="hero__dim" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero__mono" aria-hidden="true">
+        <svg class="hero__mono-l" viewBox="0 0 244 380"><use href="#lona-word" width="988" height="380"/></svg>
+        <svg class="hero__mono-r" viewBox="254 0 228 380"><use href="#lona-word" width="988" height="380"/></svg>
+      </div>
+
+      <div class="hero__intro" aria-hidden="true">
+        <svg class="hero__intro-logo" viewBox="0 0 988 380"><use href="#lona-word"/></svg>
+        <i class="hero__intro-line"></i>
+      </div>
+
+      <div class="hero__caps">
+        <div class="cap" data-from="-1" data-to="0.12">
+          <p class="kicker kicker--light"><svg aria-hidden="true"><use href="#i-arrow"/></svg>Welcome to Löna</p>
+          <h1 class="cap__title">Löna<br>Cheongdam</h1>
+          <p class="cap__kr">청담 도산대로75길</p>
+        </div>
+        <div class="cap" data-from="0.2" data-to="0.39" data-chapter="hair">
+          <p class="kicker kicker--light"><svg aria-hidden="true"><use href="#i-arrow"/></svg>The Salon</p>
+          <h2 class="cap__title">Hair<br>Station</h2>
+          <p class="cap__kr">아치 룸 헤어 스테이션</p>
+        </div>
+        <div class="cap" data-from="0.4" data-to="0.5" data-chapter="glass">
+          <p class="kicker kicker--light"><svg aria-hidden="true"><use href="#i-arrow"/></svg>Glass House</p>
+          <h2 class="cap__title">Glass<br>House</h2>
+          <p class="cap__kr">유리 온실 스테이션</p>
+        </div>
+      </div>
+
+      <div class="hero__end">
+        <svg class="hero__end-logo" viewBox="0 0 988 380" role="img" aria-label="Löna"><use href="#lona-word"/></svg>
+        <p class="hero__end-sub">Cheongdam<i></i>Hair &amp; Make up</p>
+        <a class="btn-booking btn-booking--lg" href="https://m.booking.naver.com/booking/13/bizes/515276" target="_blank" rel="noopener">Booking<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <p class="hero__end-hours">화–일 10:00–18:00 · 월 휴무</p>
+      </div>
+
+      <div class="hero__ui">
+        <a class="hero__skip" href="#marquee">Skip tour<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <span class="hero__bar" aria-hidden="true"><i></i></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- pink marquee -->
+  <div class="marquee" id="marquee" role="img" aria-label="All about beauty, Löna Cheongdam">
+    <div class="marquee__track" aria-hidden="true">
+      <span class="marquee__group"><b>All about beauty</b><svg viewBox="0 0 988 380"><use href="#lona-word"/></svg><b>Löna Cheongdam</b><svg viewBox="0 0 988 380"><use href="#lona-word"/></svg><b>All about beauty</b><svg viewBox="0 0 988 380"><use href="#lona-word"/></svg><b>Löna Cheongdam</b><svg viewBox="0 0 988 380"><use href="#lona-word"/></svg></span>
+    </div>
+  </div>
+
+  <!-- ============ AI BEAUTY LAB (page B) ============ -->
+  <section class="ailab" id="ai-beauty" aria-labelledby="ailab-title">
+    <div class="wrap">
+      <header class="sec-head">
+        <div>
+          <p class="kicker kicker--light"><svg aria-hidden="true"><use href="#i-arrow"/></svg>On-device AI by Löna</p>
+          <h2 class="sec-title sec-title--light" id="ailab-title">AI Beauty Lab</h2>
+          <p class="sec-desc ailab__desc">사진 한 장으로 로나의 메이크업 룩을 미리 입혀 봅니다.</p>
+        </div>
+        <div class="sec-head__side">
+          <p class="ailab__note">On-device · No upload<br>사진은 이 기기 밖으로 전송되지 않습니다.</p>
+        </div>
+      </header>
+      <div id="ai-lab" class="ailab__mount" aria-busy="true">
+        <p class="ailab__placeholder">AI Beauty Lab 불러오는 중</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2. STYLED BY LÖNA ============ -->
+  <section class="styled" id="style" aria-labelledby="styled-title">
+    <div class="styled__pin">
+      <header class="sec-head wrap">
+        <div>
+          <p class="kicker"><svg aria-hidden="true"><use href="#i-arrow"/></svg>Styles by Löna</p>
+          <h2 class="sec-title" id="styled-title">Styled<br>by Löna</h2>
+        </div>
+        <div class="sec-head__side">
+          <p class="sec-desc">로나 헤어·메이크업 디자이너가 <br>완성한 스타일입니다.</p>
+          <div class="arrows">
+            <button type="button" class="arrows__btn" data-dir="-1" aria-label="이전"><svg><use href="#i-arrow-l"/></svg></button>
+            <button type="button" class="arrows__btn" data-dir="1" aria-label="다음"><svg><use href="#i-arrow"/></svg></button>
+          </div>
+        </div>
+      </header>
+
+      <div class="styled__viewport">
+        <ul class="styled__track">
+          <li class="look"><figure><div class="look__img"><img src="img/look-01-480.webp" srcset="img/look-01-480.webp 480w, img/look-01-820.webp 820w" sizes="(max-width: 899px) 76vw, 24vw" width="480" height="600" alt="로우번 웨딩 헤어와 메이크업" loading="lazy" decoding="async"></div>
+            <figcaption><p class="look__name"><em>Look.</em>로우번</p><p class="look__credit"><em>Hair · Make up</em>로나 청담</p></figcaption></figure></li>
+          <li class="look"><figure><div class="look__img"><img src="img/look-15-480.webp" srcset="img/look-15-480.webp 480w, img/look-15-820.webp 820w" sizes="(max-width: 899px) 76vw, 24vw" width="480" height="600" alt="내추럴 웨이브 헤어" loading="lazy" decoding="async"></div>
+            <figcaption><p class="look__name"><em>Look.</em>내추럴 웨이브</p><p class="look__credit"><em>Hair · Make up</em>로나 청담</p></figcaption></figure></li>
+          <li class="look"><figure><div class="look__img"><img src="img/look-s004-480.webp" srcset="img/look-s004-480.webp 480w, img/look-s004-820.webp 820w" sizes="(max-width: 899px) 76vw, 24vw" width="480" height="600" alt="레이어드컷과 CS컬펌" loading="lazy" decoding="async"></div>
+            <figcaption><p class="look__name"><em>Look.</em>레이어드컷 · CS컬펌</p><p class="look__credit"><em>Hair</em>로나 청담</p></figcaption></figure></li>
+          <li class="look"><figure><div class="look__img"><img src="img/look-21-480.webp" srcset="img/look-21-480.webp 480w, img/look-21-820.webp 820w" sizes="(max-width: 899px) 76vw, 24vw" width="480" height="600" alt="베일 웨딩 스타일링" loading="lazy" decoding="async"></div>
+            <figcaption><p class="look__name"><em>Look.</em>베일 스타일링</p><p class="look__credit"><em>Hair · Make up</em>로나 청담</p></figcaption></figure></li>
+          <li class="look"><figure><div class="look__img"><img src="img/look-s008-480.webp" srcset="img/look-s008-480.webp 480w, img/look-s008-820.webp 820w" sizes="(max-width: 899px) 76vw, 24vw" width="480" height="600" alt="롱헤어 웨이브펌, 모카브라운 컬러" loading="lazy" decoding="async"></div>
+            <figcaption><p class="look__name"><em>Look.</em>웨이브펌 · 모카브라운</p><p class="look__credit"><em>Hair</em>로나 청담</p></figcaption></figure></li>
+          <li class="look"><figure><div class="look__img"><img src="img/look-18-480.webp" srcset="img/look-18-480.webp 480w, img/look-18-820.webp 820w" sizes="(max-width: 899px) 76vw, 24vw" width="480" height="600" alt="리본 로우 포니테일" loading="lazy" decoding="async"></div>
+            <figcaption><p class="look__name"><em>Look.</em>리본 로우 포니테일</p><p class="look__credit"><em>Hair · Make up</em>로나 청담</p></figcaption></figure></li>
+          <li class="look"><figure><div class="look__img"><img src="img/look-s003-480.webp" srcset="img/look-s003-480.webp 480w, img/look-s003-820.webp 820w" sizes="(max-width: 899px) 76vw, 24vw" width="480" height="600" alt="프로필 헤어메이크업" loading="lazy" decoding="async"></div>
+            <figcaption><p class="look__name"><em>Look.</em>프로필 헤어메이크업</p><p class="look__credit"><em>Hair · Make up</em>로나 청담</p></figcaption></figure></li>
+          <li class="look"><figure><div class="look__img"><img src="img/look-11-480.webp" srcset="img/look-11-480.webp 480w, img/look-11-820.webp 820w" sizes="(max-width: 899px) 76vw, 24vw" width="480" height="600" alt="플라워 핀 롱헤어" loading="lazy" decoding="async"></div>
+            <figcaption><p class="look__name"><em>Look.</em>롱헤어 · 플라워 핀</p><p class="look__credit"><em>Hair · Make up</em>로나 청담</p></figcaption></figure></li>
+          <li class="look"><figure><div class="look__img"><img src="img/look-s002-480.webp" srcset="img/look-s002-480.webp 480w, img/look-s002-820.webp 820w" sizes="(max-width: 899px) 76vw, 24vw" width="480" height="600" alt="프로필 헤어메이크업" loading="lazy" decoding="async"></div>
+            <figcaption><p class="look__name"><em>Look.</em>프로필 헤어메이크업</p><p class="look__credit"><em>Hair · Make up</em>로나 청담</p></figcaption></figure></li>
+          <li class="look"><figure><div class="look__img"><img src="img/look-08-480.webp" srcset="img/look-08-480.webp 480w, img/look-08-820.webp 820w" sizes="(max-width: 899px) 76vw, 24vw" width="480" height="600" alt="내추럴 롱헤어 웨딩" loading="lazy" decoding="async"></div>
+            <figcaption><p class="look__name"><em>Look.</em>내추럴 롱헤어</p><p class="look__credit"><em>Hair · Make up</em>로나 청담</p></figcaption></figure></li>
+        </ul>
+      </div>
+      <div class="styled__progress wrap" aria-hidden="true"><span class="styled__count"><b>01</b> / 10</span><span class="rail"><i></i></span></div>
+    </div>
+  </section>
+
+  <!-- ============ 3. RESERVATION — stacking panels ============ -->
+  <section class="menu-panels" id="reservation" aria-label="예약 메뉴">
+    <article class="panel panel--light" id="p-designer">
+      <div class="panel__inner">
+      <div class="panel__text">
+        <p class="panel__num">01 / 06</p>
+        <h2 class="panel__title">Trendsetter<br>Designer</h2>
+        <p class="panel__desc">헤어 디자이너 8명, 메이크업 아티스트 4명 중 <br>원하는 분을 지정해 예약합니다.</p>
+        <dl class="panel__roster">
+          <div><dt>Hair</dt><dd>희원 · 혜옥 · 리나 · 성훈 · 민경 · 은서 · 여진 · 채림</dd></div>
+          <div><dt>Make up</dt><dd>레지나 · 차지은 · 지구 · 시은</dd></div>
+        </dl>
+        <a class="panel__link" href="https://m.booking.naver.com/booking/13/bizes/515276" target="_blank" rel="noopener">예약 자세히보기<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <figure class="panel__media"><img src="img/panel-designer-720.webp" srcset="img/panel-designer-720.webp 720w, img/panel-designer-1300.webp 1300w" sizes="(max-width: 899px) 100vw, 44vw" width="720" height="1000" alt="채림 실장" loading="lazy" decoding="async"><figcaption>채림 실장</figcaption></figure>
+      </div>
+    </article>
+
+    <article class="panel panel--dark" id="p-profile">
+      <div class="panel__inner">
+      <div class="panel__text">
+        <p class="panel__num">02 / 06</p>
+        <h2 class="panel__title">Profile<br>Hair · Make up</h2>
+        <p class="panel__desc">프로필·면접·방송 촬영 전 <br>헤어와 메이크업을 함께 받습니다.</p>
+        <p class="panel__price"><span>메이크업 220,000원부터</span><span>스타일링 55,000원부터</span></p>
+        <a class="panel__link" href="https://m.booking.naver.com/booking/13/bizes/515276" target="_blank" rel="noopener">예약 자세히보기<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <figure class="panel__media"><img src="img/panel-profile-720.webp" srcset="img/panel-profile-720.webp 720w, img/panel-profile-1086.webp 1086w" sizes="(max-width: 899px) 100vw, 44vw" width="720" height="1000" alt="프로필 헤어메이크업, 레지나 원장" loading="lazy" decoding="async"><figcaption>Hair · Make up 레지나 원장</figcaption></figure>
+      </div>
+    </article>
+
+    <article class="panel panel--light" id="p-wedding">
+      <div class="panel__inner">
+      <div class="panel__text">
+        <p class="panel__num">03 / 06</p>
+        <h2 class="panel__title">Wedding</h2>
+        <p class="panel__desc">본식과 웨딩 촬영 <br>헤어·메이크업.</p>
+        <p class="panel__price"><span>가격은 매장 문의</span><span><a href="tel:02-545-1707">02-545-1707</a></span></p>
+        <a class="panel__link" href="https://m.booking.naver.com/booking/13/bizes/515276" target="_blank" rel="noopener">예약 자세히보기<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <figure class="panel__media"><img src="img/panel-wedding-720.webp" srcset="img/panel-wedding-720.webp 720w, img/panel-wedding-1300.webp 1300w" sizes="(max-width: 899px) 100vw, 44vw" width="720" height="1000" alt="웨딩 헤어와 메이크업, 2025 화보" loading="lazy" decoding="async"><figcaption>2025 웨딩 화보</figcaption></figure>
+      </div>
+    </article>
+
+    <article class="panel panel--dark" id="p-crew">
+      <div class="panel__inner">
+      <div class="panel__text">
+        <p class="panel__num">04 / 06</p>
+        <h2 class="panel__title">Cabin Crew</h2>
+        <p class="panel__desc">승무원 채용 면접용 <br>헤어와 메이크업.</p>
+        <p class="panel__price"><span>여 165,000원</span><span>남 99,000원</span></p>
+        <a class="panel__link" href="https://m.booking.naver.com/booking/13/bizes/515276/items/5192709" target="_blank" rel="noopener">예약 자세히보기<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <figure class="panel__media"><img src="img/panel-crew-720.webp" srcset="img/panel-crew-720.webp 720w, img/panel-crew-1300.webp 1300w" sizes="(max-width: 899px) 100vw, 44vw" width="720" height="1000" alt="로우번 헤어와 메이크업" loading="lazy" decoding="async"><figcaption>2025 화보</figcaption></figure>
+      </div>
+    </article>
+
+    <article class="panel panel--light" id="p-hair">
+      <div class="panel__inner">
+      <div class="panel__text">
+        <p class="panel__num">05 / 06</p>
+        <h2 class="panel__title">Hair</h2>
+        <p class="panel__desc">컷, 펌, 컬러, 클리닉.</p>
+        <p class="panel__price"><span>컷 55,000원부터</span><span>펌·염색 220,000원부터</span></p>
+        <a class="panel__link" href="https://m.booking.naver.com/booking/13/bizes/515276" target="_blank" rel="noopener">예약 자세히보기<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <figure class="panel__media"><img src="img/panel-hair-720.webp" srcset="img/panel-hair-720.webp 720w, img/panel-hair-1300.webp 1300w" sizes="(max-width: 899px) 100vw, 44vw" width="720" height="1000" alt="C컬펌과 레이어드컷, 뒷모습" loading="lazy" decoding="async"><figcaption>C컬펌 · 레이어드컷</figcaption></figure>
+      </div>
+    </article>
+
+    <article class="panel panel--dark" id="p-scalp">
+      <div class="panel__inner">
+      <div class="panel__text">
+        <p class="panel__num">06 / 06</p>
+        <h2 class="panel__title">Scalp<br>Clinic</h2>
+        <p class="panel__desc">두피부터 모발 끝까지 <br>관리하는 두피 클리닉.</p>
+        <p class="panel__price"><span>두피 클리닉 132,000원 <s>165,000원</s></span><span>스칼프 컷 = 컷 + 77,000원</span></p>
+        <a class="panel__link" href="https://m.booking.naver.com/booking/13/bizes/515276/items/6995888" target="_blank" rel="noopener">예약 자세히보기<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <figure class="panel__media"><img src="img/panel-scalp-720.webp" srcset="img/panel-scalp-720.webp 720w, img/panel-scalp-1009.webp 1009w" sizes="(max-width: 899px) 100vw, 44vw" width="720" height="1000" alt="롱헤어 빌드펌" loading="lazy" decoding="async"><figcaption>롱헤어 빌드펌</figcaption></figure>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ 4. SIGNATURE LOOK — scroll zoom ============ -->
+  <section class="signature" id="signature" aria-labelledby="signature-title">
+    <div class="signature__stage">
+      <div class="signature__frame">
+        <img class="signature__img" src="img/signature-1600.webp" srcset="img/signature-1600.webp 1600w, img/signature-3000.webp 3000w" sizes="(max-width: 899px) 250vw, 120vw" width="1600" height="2105" alt="2025 웨딩 화보 메이크업 클로즈업" decoding="async">
+      </div>
+      <div class="signature__text">
+        <p class="kicker kicker--light"><svg aria-hidden="true"><use href="#i-arrow"/></svg>Signature Look</p>
+        <h2 class="sec-title sec-title--light" id="signature-title">Signature<br>Look</h2>
+        <p class="signature__note">2025 웨딩 화보 메이크업</p>
+        <ol class="signature__steps">
+          <li data-step="0"><b>01</b><span class="en">Base</span><span class="kr">결 살린 베이스</span></li>
+          <li data-step="1"><b>02</b><span class="en">Eye</span><span class="kr">음영 아이</span></li>
+          <li data-step="2"><b>03</b><span class="en">Lip</span><span class="kr">그라데이션 립</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5. ACHIEVEMENTS ============ -->
+  <section class="stats" id="brand" aria-labelledby="stats-title">
+    <div class="stats__grid wrap">
+      <p class="kicker stats__kicker"><svg aria-hidden="true"><use href="#i-arrow"/></svg>Number of Löna</p>
+      <div class="stats__head">
+        <h2 class="sec-title" id="stats-title">Hair &amp; Make up<br>Under One Roof</h2>
+        <p class="sec-desc">헤어 디자이너 8명과 메이크업 아티스트 4명이 <br>한 층에서 함께 작업합니다.</p>
+      </div>
+      <dl class="stats__list">
+        <div class="stat"><dd data-count="332">332</dd><dt><span class="en">Visitor Reviews</span><span class="kr">네이버 방문자 리뷰</span></dt></div>
+        <div class="stat"><dd data-count="4.73" data-decimals="2">4.73</dd><dt><span class="en">Rating</span><span class="kr">네이버 평점 (5점 만점)</span></dt></div>
+        <div class="stat"><dd data-count="1251">1,251</dd><dt><span class="en">Blog Reviews</span><span class="kr">블로그·카페 후기</span></dt></div>
+        <div class="stat"><dd data-count="12">12</dd><dt><span class="en">Artists</span><span class="kr">헤어 8 · 메이크업 4</span></dt></div>
+      </dl>
+      <div class="stats__media">
+        <img src="img/team-shot-06-520.webp" srcset="img/team-shot-06-520.webp 520w, img/team-shot-06-900.webp 900w" sizes="(max-width: 899px) 33vw, 15vw" width="520" height="839" alt="2025 화보, 오프숄더 웨딩 메이크업" loading="lazy" decoding="async">
+        <img src="img/team-shot-22-520.webp" srcset="img/team-shot-22-520.webp 520w, img/team-shot-22-900.webp 900w" sizes="(max-width: 899px) 33vw, 15vw" width="520" height="839" alt="2025 화보, 블랙 드레스와 베일" loading="lazy" decoding="async">
+        <img src="img/team-shot-24-520.webp" srcset="img/team-shot-24-520.webp 520w, img/team-shot-24-900.webp 900w" sizes="(max-width: 899px) 33vw, 15vw" width="520" height="839" alt="2025 화보, 블랙 룩" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6. CUSTOMER STORIES ============ -->
+  <section class="stories" id="reviews" aria-labelledby="stories-title">
+    <header class="sec-head wrap">
+      <div>
+        <p class="kicker"><svg aria-hidden="true"><use href="#i-arrow"/></svg>Customer Reviews</p>
+        <h2 class="sec-title" id="stories-title">Customer Stories</h2>
+        <p class="sec-desc">네이버 방문자 리뷰에서 옮겼습니다.</p>
+      </div>
+      <div class="sec-head__side">
+        <div class="arrows">
+          <button type="button" class="arrows__btn" data-dir="-1" aria-label="이전 후기"><svg><use href="#i-arrow-l"/></svg></button>
+          <button type="button" class="arrows__btn" data-dir="1" aria-label="다음 후기"><svg><use href="#i-arrow"/></svg></button>
+        </div>
+      </div>
+    </header>
+    <ul class="stories__track" tabindex="0" aria-label="방문자 리뷰 목록">
+      <li class="story"><blockquote>“확실히 컬이 일관적이고 살아있어요. 말릴때 팁도 알려주셨는데 쉬워서 충분히 따라할수 있더라고요!”</blockquote><p class="story__meta"><b>은빛**</b><span>열펌 · 리나 원장</span></p></li>
+      <li class="story"><blockquote>“하루종일 야외에 있었는데도 헤어,메이크업 모두 그대로 오래 지속되어서 좋았습니다”</blockquote><p class="story__meta"><b>Hah**</b><span>헤어 · 메이크업</span></p></li>
+      <li class="story"><blockquote>“항상 꼼꼼하게 해주시고 원하는색으로 나와서 너무너무 좋아요!”</blockquote><p class="story__meta"><b>epa**</b><span>컬러 · 여진 실장</span></p></li>
+      <li class="story"><blockquote>“리허설 때, 본식 때 다 넘 맘에 들었어요”</blockquote><p class="story__meta"><b>민트**</b><span>웨딩</span></p></li>
+      <li class="story"><blockquote>“컬러,커트,스타일링 하나하나 섬세하고 친절하세요”</blockquote><p class="story__meta"><b>나혜**</b><span>컷 · 컬러 · 은서 실장</span></p></li>
+      <li class="story"><blockquote>“너무 자연스럽고 시간이 지나도 무너지지 않아서 좋았어요”</blockquote><p class="story__meta"><b>Min**</b><span>헤어 · 메이크업</span></p></li>
+      <li class="story"><blockquote>“메이크업 진하지않고 데일리스럽고 예쁘게 해주심”</blockquote><p class="story__meta"><b>맛디**</b><span>메이크업</span></p></li>
+      <li class="story"><blockquote>“오랜만에 마음에 쏙 드는 단발컷 했어요!”</blockquote><p class="story__meta"><b>아글**</b><span>컷</span></p></li>
+    </ul>
+    <p class="stories__trust wrap">네이버 방문자 리뷰 332 · 평점 4.73</p>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer" id="location">
+  <div class="site-footer__inner wrap">
+    <div class="site-footer__top">
+      <svg class="site-footer__logo" viewBox="0 0 988 380" role="img" aria-label="Löna"><use href="#lona-word"/></svg>
+      <a class="btn-top" href="#top" aria-label="맨 위로"><svg aria-hidden="true"><use href="#i-up"/></svg>Top</a>
+    </div>
+    <div class="site-footer__row">
+      <dl class="site-footer__info">
+        <div><dt>상호</dt><dd>로나 청담본점</dd></div>
+        <div><dt>주소</dt><dd>서울 강남구 도산대로75길 19, 1층 (청담동 96-6)</dd></div>
+        <div><dt>예약·문의</dt><dd><a href="tel:02-545-1707">02-545-1707</a></dd><dt>영업</dt><dd>화–일 10:00–18:00 · 월 휴무</dd></div>
+        <div><dt>주차</dt><dd>발렛파킹 5,000원</dd></div>
+      </dl>
+      <ul class="site-footer__sns">
+        <li><a href="https://www.instagram.com/lona_chungdam/" target="_blank" rel="noopener" aria-label="인스타그램 @lona_chungdam"><svg><use href="#i-insta"/></svg></a></li>
+        <li><a href="http://pf.kakao.com/_jYWxbs" target="_blank" rel="noopener" aria-label="카카오톡 채널"><svg><use href="#i-kakao"/></svg></a></li>
+        <li><a href="https://m.booking.naver.com/booking/13/bizes/515276" target="_blank" rel="noopener" aria-label="네이버 예약"><svg><use href="#i-naver"/></svg></a></li>
+      </ul>
+    </div>
+    <p class="site-footer__copy">Copyright © Löna Cheongdam. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- floating buttons (reference style) -->
+<div class="fabs">
+  <a class="fab fab--book" href="https://m.booking.naver.com/booking/13/bizes/515276" target="_blank" rel="noopener" aria-label="네이버 예약"><svg aria-hidden="true"><use href="#i-cal"/></svg></a>
+  <a class="fab fab--top" href="#top" aria-label="맨 위로"><svg aria-hidden="true"><use href="#i-up"/></svg></a>
+</div>
+
+<!-- mobile bottom bar -->
+<nav class="tabbar" aria-label="예약과 문의">
+  <a href="https://m.booking.naver.com/booking/13/bizes/515276" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-cal-o"/></svg>예약</a>
+  <a href="https://talk.naver.com/w4ox13" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-chat"/></svg>톡톡</a>
+  <a href="tel:02-545-1707"><svg aria-hidden="true"><use href="#i-phone"/></svg>전화</a>
+  <a href="#location"><svg aria-hidden="true"><use href="#i-pin"/></svg>오시는 길</a>
+</nav>
+
+<script src="vendor/gsap.min.js" defer></script>
+<script src="vendor/ScrollTrigger.min.js" defer></script>
+<script src="vendor/lenis.min.js" defer></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+/* Page B: AI BEAUTY LAB block (dark chapter, reference-style head) */
+.ailab { background: var(--aim-bg, #0b0b0c); color: #fff; padding: var(--section-y) 0 clamp(72px, 9vw, 120px); }
+.ailab .sec-desc { color: rgba(255, 255, 255, 0.78); margin-top: 20px; }
+.ailab__note { font-family: var(--f-en); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--aim-muted, #8c8c90); line-height: 1.8; }
+.ailab__note br + * { text-transform: none; }
+.ailab__mount {
+  --aim-bg: #0b0b0c; --aim-fg: #ffffff; --aim-muted: #8c8c90; --aim-line: rgba(255, 255, 255, 0.14);
+  margin-top: clamp(36px, 5vw, 56px); min-height: min(86vh, 820px);
+}
+.ailab__placeholder { display: grid; place-items: center; min-height: inherit; border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 8px; color: #8c8c90; font-size: 0.875rem; }
+.ailab__mount:not([aria-busy="true"]) .ailab__placeholder { display: none; }
+.gnb__ai { color: var(--accent-ink); }
+.site-header[data-theme="dark"] .gnb__ai { color: var(--accent); }
+@media (max-width: 899px) {
+  .ailab__mount { min-height: 70vh; }
+  .ailab .sec-head__side { display: block; }
+}

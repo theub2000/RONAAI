@@ -1,0 +1,60 @@
+/* Löna design tokens — reference-style (white / mist / black + one pink accent).
+   Shared by page A (site/) and page B (site-ai/). */
+:root {
+  /* grounds */
+  --c-white: #ffffff;
+  --c-mist: #f7f4f5;          /* light pink-grey ground */
+  --c-black: #0b0b0c;
+  --c-black-2: #161618;
+  /* ink */
+  --c-ink: #111112;
+  --c-text: #333336;
+  --c-grey: #6b6b70;
+  --c-grey-2: #9a9aa0;
+  --c-line: #e7e3e4;
+  --c-line-dark: rgba(255, 255, 255, 0.14);
+  /* the one accent */
+  --accent: #F2557F;          /* fills, numerals, CTA, marquee */
+  --accent-ink: #d63a67;      /* small pink text on white (AA) */
+  --accent-soft: #fde7ee;
+
+  /* AI makeup module (page B) dark theme */
+  --aim-bg: #0b0b0c;
+  --aim-fg: #ffffff;
+  --aim-muted: #8c8c90;
+  --aim-line: rgba(255, 255, 255, 0.14);
+  --aim-accent: #ffffff;
+
+  /* type */
+  --f-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif;
+  --f-en: "Montserrat", "Pretendard Variable", Pretendard, system-ui, sans-serif;
+  --fs-kicker: 0.8125rem;
+  --fs-small: 0.875rem;
+  --fs-body: 1rem;
+  --fs-desc: clamp(0.9375rem, 0.88rem + 0.2vw, 1.0625rem);
+  --fs-h2: clamp(2.25rem, 1.2rem + 3.6vw, 4.25rem);
+  --fs-hero: clamp(3rem, 1.4rem + 6.2vw, 7.5rem);
+
+  /* layout */
+  --wrap: 1260px;
+  --gutter: clamp(20px, 5vw, 90px);
+  --sns-h: 30px;
+  --gnb-h: 64px;
+  --header-h: calc(var(--sns-h) + var(--gnb-h));
+  --tab-h: 62px;
+  --safe-b: env(safe-area-inset-bottom, 0px);
+  --section-y: clamp(96px, 13vw, 180px);
+  --radius: 6px;
+
+  /* motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+@media (max-width: 899px) {
+  :root {
+    --sns-h: 40px;
+    --gnb-h: 56px;
+    --gutter: 20px;
+  }
+}
